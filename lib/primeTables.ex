@@ -12,10 +12,6 @@ defmodule PrimeTables do
     primes
   end
 
-  # def remove_multiples(list, index_to_replace, i, n) when index_to_replace <= n do
-  #   remove_multiples(List.replace_at(list, index_to_replace, false), i+index_to_replace, i, n)
-  # end
-
   def remove_multiples([head | tail], n, l) when head <= l do
     [head | remove_multiples(Enum.filter(tail, fn e -> rem(e, head) !== 0 end), n, l)]
   end
@@ -27,7 +23,6 @@ defmodule PrimeTables do
   def remove_multiples([], _, _) do
     []
   end
-
 
 end
 
