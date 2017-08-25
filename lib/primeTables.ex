@@ -8,22 +8,21 @@ defmodule PrimeTables do
   """
 
   def list_of_primes(n) do
-    {:ok, pid} = MatrixServer.start_link
-    remove_multiples(Enum.to_list(2..n), n, :math.sqrt(n), pid)
+    prime_list = remove_multiples(Enum.to_list(2..n), n, :math.sqrt(n))
+    find_next_prime(n, length(prime_list), length(prime_list), [])
   end
 
-  def remove_multiples([head | tail], n, l, pid) when head <= l do
-    [head | remove_multiples(Enum.filter(tail, fn e -> rem(e, head) !== 0 end), n, l, pid)]
+  def remove_multiples([head | tail], n, l) when head <= l do
+    [head | remove_multiples(Enum.filter(tail, fn e -> rem(e, head) !== 0 end), n, l)]
   end
   
-  def remove_multiples([head | tail], _, l, _) when head > l do
+  def remove_multiples([head | tail], _, l) when head > l do
     [head | tail]
   end
 
-  def remove_multiples([], _, _, _) do
+  def remove_multiples([], _, _) do
     []
   end
-
 
   def matrix(list) do
     row = list
@@ -38,6 +37,15 @@ defmodule PrimeTables do
 
       #sequentially
       # Enum.map(col, fn (e) ->  Stream.zip(row, Stream.cycle([e])) |> Enum.map(fn {x, y} -> x * y end) end)
+  end
+
+  def find_next_prime(n, length, new_length, _) when new_length <= length do
+    new_list = remove_multiples(Enum.to_list(2..n+2), n+2, :math.sqrt(n+2))
+    find_next_prime(n+2, length, length(new_list), new_list)
+  end
+
+  def find_next_prime(_, _, _, new_list) do
+    new_list
   end
 
 end
