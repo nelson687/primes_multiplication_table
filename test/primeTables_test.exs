@@ -25,7 +25,7 @@ defmodule PageControllerTest do
 #   end
 
   test "Calculates matrix" do
-    list_of_primes = PrimeTables.list_of_primes(250000)
+    list_of_primes = PrimeTables.list_of_primes(100000)
     IO.inspect(length(list_of_primes))
     # list_of_primes = PrimeTables.list_of_primes(5)
     # IO.puts("NELSON")
