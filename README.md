@@ -3,7 +3,7 @@ The multiplication table will be displayed in the browser
 ### Run:
   - Go to application directory and run ```mix phx.server```
   - Go to browser and enter http://localhost:4000
-  - Insert an number and click on Submit.
+  - Insert a number and click on Submit.
   - For small amount of primes expected browser is going to be fine, for big numbers, for example n > 50000 I suggest testing using the unit tests, as the browser might freeze.
 
 ### Tests:
