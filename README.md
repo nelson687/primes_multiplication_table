@@ -11,6 +11,7 @@ The multiplication table will be displayed in the browser
   - Go to browser and enter http://localhost:4000
   - Insert a number and click on Submit.
   - For small amount of primes expected browser is going to be fine, for big numbers, for example n > 50000 I suggest testing using the unit tests, as the browser might freeze.
+  - For large numbers, if trying in the browser, after a while, the matrix will start showing progressively.
 
 ### Tests:
   - Run ```mix test``` on application directory.
