@@ -1,7 +1,12 @@
 <div class="jumbotron">
-  <h2><%= gettext "Prime table" %></h2>
+  <h2><%= gettext "Primes multiplication table" %></h2>
 </div>
 
 <div class="row marketing">
   
+<form action="/matrix">
+  <input name="number" placeholder="Insert number" />
+  <input type="submit" value="Submit" > 
+</form>
+
 </div>

@@ -1,0 +1,13 @@
+{application,primeTables,
+             [{applications,[kernel,stdlib,elixir,logger,runtime_tools,
+                             gettext,flow,phoenix_pubsub,cowboy,phoenix_html,
+                             phoenix,phoenix_live_reload]},
+              {description,"primeTables"},
+              {modules,['Elixir.MatrixServer','Elixir.MultiplicationTable',
+                        'Elixir.PrimeCalculator','Elixir.PrimeTables',
+                        'Elixir.PrimeTables.Application',
+                        'Elixir.PrimeTablesWeb']},
+              {registered,[]},
+              {vsn,"0.0.1"},
+              {mod,{'Elixir.PrimeTables.Application',[]}},
+              {extra_applications,[logger,runtime_tools]}]}.
