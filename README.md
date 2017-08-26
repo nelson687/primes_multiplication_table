@@ -1,5 +1,11 @@
 ## Phoenix project that takes a numeric input (N) from user and outputs a multiplication table of (N) prime numbers.
 The multiplication table will be displayed in the browser
+
+### Stack
+  - Erlang/OTP 20
+  - Elixir 1.5.1
+  - Phoenix 1.3.0
+
 ### Run:
   - Go to application directory and run ```mix phx.server```
   - Go to browser and enter http://localhost:4000
