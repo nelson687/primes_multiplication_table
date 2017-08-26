@@ -15,7 +15,7 @@ defmodule PrimeTablesTest do
 
   test "Returns multiplication table of primes + 1 for input == 3" do
     expected_result = [[4, 6, 10], [6, 9, 15], [10, 15, 25]]
-    matrix = PrimeTables.get_multiplication_table(3)
+    {matrix, _} = PrimeTables.get_multiplication_table(3)
     assert matrix == expected_result
   end
 end

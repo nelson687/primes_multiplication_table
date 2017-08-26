@@ -17,7 +17,7 @@ defmodule PrimeTablesWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    get "/matrix", PageController, :get_matrix
+    get "/matrix/", PageController, :get_matrix
   end
 
   # Other scopes may use custom stacks.

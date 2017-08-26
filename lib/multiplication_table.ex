@@ -1,12 +1,9 @@
 defmodule MultiplicationTable do
 
     def matrix(list) do
-    row = list
-    col = row
+    multiply = fn (e) ->  Stream.zip(list, Stream.cycle([e])) |> Enum.map(fn {x, y} -> x * y end) end
 
-    multiply = fn (e) ->  Stream.zip(row, Stream.cycle([e])) |> Enum.map(fn {x, y} -> x * y end) end
-
-    col
+    list
       |> Enum.map(&Task.async(fn -> multiply.(&1) end))
       |> Enum.map(&Task.await(&1))
 
