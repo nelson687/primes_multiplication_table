@@ -4,14 +4,14 @@
             <td></td>
             <%=for number <- @numbers do %>
                     <th scope="col"><%= number %></th>
-            <%= end %>
+            <% end %>
 		</tr>
             <%=for list <- @matrix do %>
                 <tr> 
                     <th scope="row"><%= Enum.at(@numbers, elem(list,1)) %></th>
                      <%=for element <- elem(list,0) do %>
                         <td><%= element %></td>
-                     <%= end %>
+                     <% end %>
                 </tr>
-            <%= end %>
+            <% end %>
 </table>
