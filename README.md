@@ -1,18 +1,12 @@
-# PrimeTables
+# Phoenix project that takes a numeric input (N) from user and outputs a multiplication table of (N) prime numbers.
+The multiplication table will be displayed in the browser
+## Run:
+  - Go to application directory and run ```mix phx.server```
+  - Go to browser and enter http://localhost:4000
+  - Insert an number and click on Submit.
+  - For small amount of primes expected browser is going to be fine, for big numbers, for example n > 50000 I suggest testing using the unit tests, as the browser might freeze.
 
-To start your Phoenix server:
+## Tests:
+  - Run ```mix test``` on application directory.
 
-  * Install dependencies with `mix deps.get`
-  * Start Phoenix endpoint with `mix phx.server`
-
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
-
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+Very interesting project where I could learn about Elixir and had to think about performance.

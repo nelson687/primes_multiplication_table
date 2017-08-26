@@ -3,6 +3,9 @@
 /db
 /deps
 /*.ez
+/cover
+erl_crash.dump
+*.beam
 
 # Generated on crash by the VM
 erl_crash.dump
