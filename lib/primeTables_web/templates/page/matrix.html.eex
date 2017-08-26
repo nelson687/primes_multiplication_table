@@ -8,7 +8,7 @@
 		</tr>
             <%=for list <- @matrix do %>
                 <tr> 
-                    <th scope="row"><%= Enum.at(@numbers, elem(list,1)) %></th>
+                    <th scope="row"><%= get_prime_number_from_list(@numbers, list) %></th>
                      <%=for element <- elem(list,0) do %>
                         <td><%= element %></td>
                      <% end %>
